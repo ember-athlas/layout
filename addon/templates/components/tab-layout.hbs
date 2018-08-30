@@ -1,0 +1,11 @@
+{{#if top}}
+{{tab-layout/tabbar container=this changePage=(action 'changePage')}}
+{{/if}}
+<div class="layout-tab-container {{containerClass}}">
+	{{yield (hash
+		page=(component 'page-layout/page' container=this)
+	)}}
+</div>
+{{#if bottom}}
+	{{tab-layout/tabbar container=this changePage=(action 'changePage')}}
+{{/if}}

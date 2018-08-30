@@ -1,0 +1,5 @@
+{{#each container.pages as |page|}}
+<li class="nav-item nav-link {{if page.isActive 'active'}}" {{action changePage page.name}}>
+	{{#if page.icon}}<i class="fa fa-fw fa-{{page.icon}}"></i>{{/if}} {{page.label}}
+</li>
+{{/each}}
